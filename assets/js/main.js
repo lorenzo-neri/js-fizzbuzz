@@ -48,7 +48,8 @@ for (let i = 1; i <= 100; i++) {
     liEL.classList.add('d-flex');
     liEL.classList.add('align-items-center');
     liEL.classList.add('m-2');
-    liEL.classList.add('justify-content-center')
+    liEL.classList.add('justify-content-center');
+    liEL.classList.add('border', 'border-dark')
 
     //per i numeri che sono sia multipli di 3 che di 5 stampi “FizzBuzz”
     if (i % 3 === 0 && i % 5 === 0) {
