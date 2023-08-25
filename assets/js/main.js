@@ -20,24 +20,35 @@ const containerEl = document.createElement('div');
 const bodyEl = document.querySelector('body');
 const titleEl = document.createElement('h1');
 const ulEl = document.createElement('ul');
-const liEL = document.createElement('li');
 
 bodyEl.append(titleEl);
 bodyEl.append(containerEl);
 titleEl.append('FizzBuzzDOM');
 containerEl.append(ulEl);
-ulEl.append(liEL);
 
 //BONUS 2:
 //Applica stili differenti agli elementi aggiunti al DOM nel BONUS 1, a seconda che il valore inserito sia un numero, un fizz, un buzz o un fizzbuzz. Se sei a corto di idee per lo stile, potresti prendere spunto dallo screenshot fornito in consegna. 
 
 containerEl.classList.add('container');
-bodyEl.classList.add('text-center', 'bg-dark');
+bodyEl.classList.add('text-center', 'bg-primary');
 titleEl.classList.add('text-light');
+
+ulEl.classList.add('d-flex');
+ulEl.classList.add('flex-wrap');
+ulEl.classList.add('list-unstyled');
+
 
 
 //stampo in console i numeri da 1 a 100
 for (let i = 1; i <= 100; i++) {
+    
+    const liEL = document.createElement('li');
+    ulEl.append(liEL);
+    
+    liEL.classList.add('d-flex');
+    liEL.classList.add('align-items-center');
+    liEL.classList.add('m-2');
+    liEL.classList.add('justify-content-center')
 
     //per i numeri che sono sia multipli di 3 che di 5 stampi “FizzBuzz”
     if (i % 3 === 0 && i % 5 === 0) {
