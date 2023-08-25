@@ -41,10 +41,10 @@ ulEl.classList.add('list-unstyled');
 
 //stampo in console i numeri da 1 a 100
 for (let i = 1; i <= 100; i++) {
-    
+
     const liEL = document.createElement('li');
     ulEl.append(liEL);
-    
+
     liEL.classList.add('d-flex');
     liEL.classList.add('align-items-center');
     liEL.classList.add('m-2');
@@ -61,7 +61,7 @@ for (let i = 1; i <= 100; i++) {
         console.log('Fizz');
         liEL.append('Fizz');
         liEL.classList.add('text-bg-success');
-        
+
         //per i multipli di 5 stampo “Buzz”
     } else if (i % 5 === 0) {
         console.log('Buzz');
